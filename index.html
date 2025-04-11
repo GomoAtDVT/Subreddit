@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div><h1>SUBREDDIT</h1>
+            <p id="direction">CLICK THE “+” ICON TO ADD A <br> SUBREDDIT</p></div>
+        <button onclick="displayModal()" class="add-btn">+</button>
+    </header>
+
+
+   
+        <section id="modal">
+            <div class="wrapper">
+                <dialog id="subreddit-prompt" class="enter-subreddit-container">
+                   <form class="enter-subreddit-form">
+                    <p>ENTER THE NAME OF A SUBREDDIT</p>
+                    <input type="text" id="subreddit-input" placeholder="r/subreddit" required>
+                    <button type="button" onclick="searchChannel()" id="add-subreddit-btn">ENTER</button>
+                   </form>
+                </dialog>
+            </div>
+        </section>
+
+
+
+
+        <main class="main-container">
+            <section id="tabs-container" class="tabs-container">
+                <!-- Tabs will be added here dynamically -->
+            </section>
+
+            <section id="subreddit-tab-container">
+                <p id="subreddit-tab-title" class="tab-title"></p>
+                    <div id="menu-btn-container" class="menu-btn-container">
+                        <button class="refresh-btn" onclick="refreshCurrentTab()">REFRESH</button>
+                        <hr>
+                        <button id="delete" onclick="deleteCurrentTab()">DELETE</button>
+                    </div>
+            </section>
+
+            <section id="subreddit-content-container" class="subreddit-content-container">
+                <!-- Subreddit content panels will be added here dynamically -->
+            </section>
+
+        </main>
+    <script src="script.js"></script>
+</body>
+</html>
