@@ -8,9 +8,10 @@ body {
     font-family: Arial, sans-serif;
     height: 100vh;
     background: url(./images/christian-boragine-EECOcksb6d8-unsplash.jpg);
-    background-size: 100%;
+    /* background-size: 100%; */
     background-repeat:repeat-y;
-    
+    background-position:  50% 5%;
+    background-size: cover;
 }
 
 .header {
@@ -220,4 +221,36 @@ body {
     100%{
         opacity: 1;
     }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-position: 90% 10%;
+        background-size: cover;
+    }
+    .header h1 {
+        font-size: 20px;
+    }
+    .header p {
+        font-size: 13px;
+    }
+    .add-btn{
+        font-size: 30px;
+    }
+    .enter-subreddit-form p{
+        font-size: 15px;
+    }
+    .enter-subreddit-form input{
+        font-size: 15px;
+    }
+    .enter-subreddit-form button {
+        font-size: 15px;
+    }
+    /* .menu-btn-container{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    } */
 }
